@@ -1,6 +1,10 @@
+import sys
 from slot_finder import SlotFinder
 from pprint import pprint
 from time import time, sleep, strftime, localtime
+from logger import Logger
+
+sys.stdout = Logger(sys.stdout)
 
 if __name__ == "__main__":
     slot_finder_instance = SlotFinder()
